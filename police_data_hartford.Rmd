@@ -1,0 +1,22 @@
+---
+title: "police_stop"
+author: "Jeremy Ornstein"
+date: "10/24/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readxl)
+library(sf)
+library(gt)
+```
+
+```{r}
+hartford_police <- read.csv("ct_hartford_2019_08_13.csv")
+
+hartford_police %>% filter(officer_id_hash == "09739d95d7")
+```
+
+
